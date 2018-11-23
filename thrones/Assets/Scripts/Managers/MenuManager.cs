@@ -8,13 +8,15 @@ namespace Thrones.Managers
     public class MenuManager : MonoBehaviour
     {
         public string page = "";
+        public int index = 0;
 
         // ページ一覧の定義
         public static readonly Dictionary<string, string> PageList = new Dictionary<string, string>()
         {
-            { "home",       "HomePage" },
-            { "menu",       "MenuPage" },
-            { "quest",      "QuestPage" },
+            { "home",   "HomePage" },
+            { "menu",   "MenuPage" },
+            { "quest",  "QuestPage" },
+            { "deck",   "DeckPage" },
         };
 
 
@@ -23,6 +25,11 @@ namespace Thrones.Managers
         {
             Button button = gameObject.GetComponent<Button>();
             button.onClick.AddListener(OnClick);
+
+            if (this.index > 0)
+            {
+                gameObject.transform.SetAsLastSibling();
+            }
         }
 
         public void OnClick()
