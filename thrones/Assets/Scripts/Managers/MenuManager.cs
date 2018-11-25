@@ -32,6 +32,7 @@ namespace Thrones.Managers
             }
         }
 
+
         public void OnClick()
         {
             Debug.Log($" - Click {gameObject.name} button .");
@@ -43,10 +44,12 @@ namespace Thrones.Managers
         }
 
 
+        // ページの表示
         public void ShowPage()
         {
             this.GetPageGameObject().GetComponent<PageManager>().Show();
         }
+
 
         private GameObject GetPageGameObject()
         {
