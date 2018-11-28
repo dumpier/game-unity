@@ -817,7 +817,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   page: menu
-  index: 0
 --- !u!114 &96886500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2443,7 +2442,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   page: home
-  index: 0
 --- !u!114 &483924644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3867,7 +3865,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!1 &721699951
 GameObject:
@@ -6930,7 +6928,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   page: menu
-  index: 1
 --- !u!114 &1163981849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8068,7 +8065,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   page: deck
-  index: 0
 --- !u!114 &1286264589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9567,12 +9563,12 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 0
+  m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &1488304125
 MonoBehaviour:
@@ -12025,7 +12021,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   page: quest
-  index: 0
 --- !u!114 &1974720666
 MonoBehaviour:
   m_ObjectHideFlags: 0
