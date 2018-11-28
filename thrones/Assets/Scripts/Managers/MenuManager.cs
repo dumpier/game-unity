@@ -16,6 +16,9 @@ namespace Thrones.Managers
             { "menu",   "MenuPage" },
             { "quest",  "QuestPage" },
             { "deck",   "DeckPage" },
+            { "gacha",      "GachaPage" },
+            { "mission",    "MissionPage" },
+            { "character",  "CharacterPage" },
         };
 
 
