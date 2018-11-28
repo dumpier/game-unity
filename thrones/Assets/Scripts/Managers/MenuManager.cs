@@ -8,7 +8,6 @@ namespace Thrones.Managers
     public class MenuManager : MonoBehaviour
     {
         public string page = "";
-        public int index = 0;
 
         // ページ一覧の定義
         public static readonly Dictionary<string, string> PageList = new Dictionary<string, string>()
@@ -26,15 +25,18 @@ namespace Thrones.Managers
             Button button = gameObject.GetComponent<Button>();
             button.onClick.AddListener(OnClick);
 
-            if (this.index > 0)
-            {
-                gameObject.transform.SetAsLastSibling();
-            }
         }
 
 
         public void OnClick()
         {
+            if(this.page == "menu")
+            {
+                GameObject.Find("MenuPage").GetComponent<PageManager>().Toggle();
+
+                return;
+            }
+
             Debug.Log($" - Click {gameObject.name} button .");
 
             // 現在表示中のを隠す

@@ -31,9 +31,13 @@ namespace Thrones.Managers
         }
 
 
+        private bool is_showing = false;
+
         public void Show()
         {
             Debug.Log($"Show {gameObject.name}");
+
+            this.is_showing = true;
             gameObject.transform.localPosition = new Vector3(0, 0, 0);
 
             PageManager.currentPage = gameObject;
@@ -43,7 +47,22 @@ namespace Thrones.Managers
         public void Hide()
         {
             Debug.Log($"Hide {gameObject.name}");
+
+            this.is_showing = false;
             gameObject.transform.localPosition = this.originalVector;
+        }
+
+
+        public void Toggle()
+        {
+            if(this.is_showing)
+            {
+                this.Hide();
+            }
+            else
+            {
+                this.Show();
+            }
         }
 
     }
