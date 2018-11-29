@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Controllers\Booting\BootingController.cs" />
     <Compile Include="Assets\Scripts\Controllers\Controller.cs" />
     <Compile Include="Assets\Scripts\Controllers\Home\Controller.cs" />
     <Compile Include="Assets\Scripts\Controllers\Home\HomeController.cs" />
