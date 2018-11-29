@@ -16,18 +16,6 @@ namespace Thrones.Managers
         private bool is_showing = false;
 
 
-        // 現在表示中のページを取得
-        public static GameObject getCurrentPage()
-        {
-            if(PageManager.currentPage)
-            {
-                return PageManager.currentPage;
-            }
-
-            return GameObject.Find("HomePage");
-        }
-
-
         void Start()
         {
             // 初期ポジションを記録
@@ -35,10 +23,18 @@ namespace Thrones.Managers
 
             Debug.Log($"# Start {gameObject.name} x:{this.originalVector.x}, y:{this.originalVector.y}");
 
+            // デフォルトでHomeを表示する TODO シーン初期化に移動する
             if(gameObject.name.Equals("HomePage"))
             {
                 this.Show();
             }
+        }
+
+
+        // 現在表示中のページを取得
+        public static GameObject getCurrentPage()
+        {
+            return PageManager.currentPage;
         }
 
 
@@ -69,6 +65,7 @@ namespace Thrones.Managers
         }
 
 
+        // 表示・非表示の切替
         public void Toggle()
         {
             if(this.is_showing)
