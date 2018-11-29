@@ -22,56 +22,48 @@ namespace Thrones.Managers
         };
 
 
-
         private void Start()
         {
             Button button = gameObject.GetComponent<Button>();
             button.onClick.AddListener(OnClick);
-
         }
 
 
         public void OnClick()
         {
-            if(this.page == "menu")
+            if(this.page.Equals("menu"))
             {
-                GameObject.Find("MenuPage").GetComponent<PageManager>().Toggle();
-
+                this.ShowMenuPage();
                 return;
             }
-
-            Debug.Log($" - Click {gameObject.name} button .");
 
             // 現在表示中のを隠す
             PageManager.getCurrentPage().GetComponent<PageManager>().Hide();
 
-            this.ShowPage();
-        }
-
-
-        // ページの表示
-        public void ShowPage()
-        {
+            // 指定ページの表示
             this.GetPageGameObject().GetComponent<PageManager>().Show();
         }
 
 
-        private GameObject GetPageGameObject()
+        // メニュー一覧の表示
+        private void ShowMenuPage()
         {
-            Debug.Log($"page : {this.page}");
-
-            string page_name = "HomePage";
-
-            foreach (KeyValuePair<string, string> pair in MenuManager.PageList)
+            // 現在表示中のページがMenu一覧でない場合隠す
+            if (! PageManager.getCurrentPage().name.Equals("MenuPage"))
             {
-                if (pair.Key == this.page)
-                {
-                    page_name = pair.Value;
-                    break;
-                }
+                PageManager.getCurrentPage().GetComponent<PageManager>().Hide();
             }
 
-            Debug.Log($"panel name: {page_name}");
+            GameObject.Find("MenuPage").GetComponent<PageManager>().Toggle();
+        }
+
+
+        // ページオブジェクトの取得
+        private GameObject GetPageGameObject()
+        {
+            string page_name = "HomePage";
+
+            MenuManager.PageList.TryGetValue(this.page, out page_name);
 
             return GameObject.Find(page_name);
         }
