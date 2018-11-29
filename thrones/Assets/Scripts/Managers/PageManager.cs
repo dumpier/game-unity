@@ -12,6 +12,10 @@ namespace Thrones.Managers
         // 該当ページの初期ポジション
         private Vector3 originalVector;
 
+        // 現在表示中か
+        private bool is_showing = false;
+
+
         // 現在表示中のページを取得
         public static GameObject getCurrentPage()
         {
@@ -23,19 +27,20 @@ namespace Thrones.Managers
             return GameObject.Find("HomePage");
         }
 
+
         void Start()
         {
+            // 初期ポジションを記録
             this.originalVector = gameObject.transform.localPosition;
 
-            Debug.Log($"Start {gameObject.name} x:{this.originalVector.x}, y:{this.originalVector.y}");
+            Debug.Log($"# Start {gameObject.name} x:{this.originalVector.x}, y:{this.originalVector.y}");
         }
 
 
-        private bool is_showing = false;
-
+        // ページを表示する
         public void Show()
         {
-            Debug.Log($"Show {gameObject.name}");
+            Debug.Log($"## Show {gameObject.name}");
 
             this.is_showing = true;
             gameObject.transform.localPosition = new Vector3(0, 0, 0);
@@ -44,9 +49,10 @@ namespace Thrones.Managers
         }
 
 
+        // ページを隠す
         public void Hide()
         {
-            Debug.Log($"Hide {gameObject.name}");
+            Debug.Log($"## Hide {gameObject.name}");
 
             this.is_showing = false;
             gameObject.transform.localPosition = this.originalVector;
