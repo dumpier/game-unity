@@ -1,0 +1,13 @@
+{
+    "menus": {
+        "home": "HomePage",
+        "mainMenu": "MainMenuPage",
+        "menu": "MenuPage",
+        "quest": "QuestPage",
+        "deck": "DeckPage",
+        "character": "CharacterPage",
+        "store": "StorePage",
+        "gacha": "GachaPage",
+        "mission": "MissionPage"
+    }
+}

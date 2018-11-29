@@ -60,6 +60,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Controllers\Controller.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Home\Controller.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Home\HomeController.cs" />
     <Compile Include="Assets\Scripts\Managers\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Managers\PageManager.cs" />
     <Reference Include="UnityEditor.StandardEvents">

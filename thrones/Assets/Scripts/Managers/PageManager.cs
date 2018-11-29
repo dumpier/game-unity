@@ -34,6 +34,11 @@ namespace Thrones.Managers
             this.originalVector = gameObject.transform.localPosition;
 
             Debug.Log($"# Start {gameObject.name} x:{this.originalVector.x}, y:{this.originalVector.y}");
+
+            if(gameObject.name.Equals("HomePage"))
+            {
+                this.Show();
+            }
         }
 
 
@@ -53,6 +58,11 @@ namespace Thrones.Managers
         public void Hide()
         {
             Debug.Log($"## Hide {gameObject.name}");
+
+            if(gameObject.name.Equals("HomePage"))
+            {
+                return;
+            }
 
             this.is_showing = false;
             gameObject.transform.localPosition = this.originalVector;

@@ -31,7 +31,7 @@ namespace Thrones.Managers
 
         public void OnClick()
         {
-            if(this.page == "menu")
+            if(this.page.Equals("menu"))
             {
                 this.ShowMenuPage();
                 return;
@@ -48,9 +48,9 @@ namespace Thrones.Managers
         // メニュー一覧の表示
         private void ShowMenuPage()
         {
-            if (PageManager.getCurrentPage().name != "MenuPage")
+            // 現在表示中のページがMenu一覧でない場合隠す
+            if (! PageManager.getCurrentPage().name.Equals("MenuPage"))
             {
-                // 現在表示中のページを隠す
                 PageManager.getCurrentPage().GetComponent<PageManager>().Hide();
             }
 

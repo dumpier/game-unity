@@ -1,0 +1,37 @@
+{
+    "menusDefault": {
+        "name": "",
+        "bg-color": "#204FAD",
+        "bg-transparent": 40,
+        "icon": "",
+        "icon-font": "fontawesome-free-5.5.0/Font Awesome 5 Free-Solid-900",
+        "icon-color": "#FvF9F9",
+        "icon-size": "50",
+        "font": "",
+        "font-size": "32",
+        "font-color": "#FvF9F9",
+        "prefab": ""
+    },
+    "menus": {
+        "close": {
+            "name": "ï¬Ç∂ÇÈ",
+            "icon": "",
+            "prefab": ""
+        },
+        "prev": {
+            "name": "ñﬂÇÈ",
+            "icon": "",
+            "prefab": ""
+        },
+        "next": {
+            "name": "êiÇﬁ",
+            "icon": "",
+            "prefab": ""
+        },
+        "reload": {
+            "name": "ÉäÉçÅ[Éh",
+            "icon": "",
+            "prefab": ""
+        }
+    }
+}
