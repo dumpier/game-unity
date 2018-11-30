@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Thrones.Managers
 {
     public class MenuManager : MonoBehaviour
     {
+        public string scene = "";
         public string page = "";
+
 
         // ページ一覧の定義
         public static readonly Dictionary<string, string> PageList = new Dictionary<string, string>()
@@ -31,6 +34,14 @@ namespace Thrones.Managers
 
         public void OnClick()
         {
+            // シーンの切替
+            if(this.scene.Equals("battle"))
+            {
+                SceneManager.LoadScene("Battle");
+                return;
+            }
+
+            // メインメニューの表示
             if(this.page.Equals("menu"))
             {
                 this.ShowMenuPage();
