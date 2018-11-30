@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-namespace Thrones.Controllers.Booting
+namespace Thrones.Controllers.Scenes.Booting
 {
     public class BootingController : Thrones.Controllers.Controller
     {

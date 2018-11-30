@@ -60,12 +60,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Controllers\Booting\BootingController.cs" />
     <Compile Include="Assets\Scripts\Controllers\Controller.cs" />
-    <Compile Include="Assets\Scripts\Controllers\Home\Controller.cs" />
-    <Compile Include="Assets\Scripts\Controllers\Home\HomeController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Scenes\Battle\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Scenes\Booting\BootingController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Scenes\Home\Controller.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Scenes\Home\HomeController.cs" />
     <Compile Include="Assets\Scripts\Managers\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Managers\PageManager.cs" />
+    <Compile Include="Assets\Scripts\Networks\Restfull.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>I:/Develop/Github/dumpieer/game-unity/thrones/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
