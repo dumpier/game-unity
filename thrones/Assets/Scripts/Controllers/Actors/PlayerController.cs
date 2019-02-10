@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace Thrones.Controllers.Scenes.Battle
+namespace Thrones.Controllers.Actors.Battle
 {
     public class PlayerController : MonoBehaviour
     {
