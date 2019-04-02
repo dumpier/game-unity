@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace Thrones.Controllers.Scenes.Battle
+namespace Thrones.Controllers.Actors.Battle
 {
     public class PlayerController : MonoBehaviour
     {
         // 速度
         public float speed = 3.0f;
-
+        public float step;
 
         // 移動する方向とベクトル（動く力、速度）の変数（最初は初期化しておく）
         private Vector3 moveDirection = Vector3.zero;
@@ -47,11 +47,19 @@ namespace Thrones.Controllers.Scenes.Battle
             }
             if (Input.GetKey("right"))
             {
-                transform.position += transform.right * speed * Time.deltaTime;
+                // 回転
+                step = speed * Time.deltaTime;
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 1f, 0), step);
+
+                // transform.position += transform.right * speed * Time.deltaTime;
             }
             if (Input.GetKey("left"))
             {
-                transform.position -= transform.right * speed * Time.deltaTime;
+                // 回転
+                step = speed * Time.deltaTime;
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 1f, 0), step);
+
+                // transform.position -= transform.right * speed * Time.deltaTime;
             }
         }
     }
